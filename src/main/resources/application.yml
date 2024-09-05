@@ -1,0 +1,27 @@
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  datasource:
+    url: ${URL}
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 500
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      port: ${PORT}
+      host: ${HOST}
+
+server:
+  port: 8080
+
+
